@@ -10,6 +10,8 @@ int main() {
         scanf("%d", &num[i]);
         soma += num[i];
     }
+
     printf("A soma dos numeros digitados é: %d\n", soma);
+
     return 0;
 }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int tmax = 10, menorNum = 2147483647, menorIndex = 0;
+    int tmax = 10, maiorNum = -2147483648, menorNum = 2147483647, diferenca;
     int num[tmax];
 
     for (int i = 0; i < tmax; i++) {
@@ -10,14 +10,19 @@ int main() {
     }
 
     for (int i = 0; i < tmax; i++) {
+        if (num[i] > maiorNum) {
+            maiorNum = num[i];
+        }
         if (num[i] < menorNum) {
             menorNum = num[i];
-            menorIndex = i;
         }
     }
 
+    diferenca = maiorNum - menorNum;
+
+    printf("O maior número digitado foi: %d\n", maiorNum);
     printf("O menor número digitado foi: %d\n", menorNum);
-    printf("Ele estava na posição: %d\n", menorIndex + 1);
+    printf("A diferença entre eles é: %d\n", diferenca);
 
     return 0;
 }

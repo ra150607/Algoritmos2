@@ -10,6 +10,7 @@ int main() {
         scanf("%f", &notas[i]);
         soma += notas[i];
     }
+
     media = soma / tmax;
     printf("A média das notas digitadas é: %f\n", media);
 

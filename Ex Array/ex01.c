@@ -8,9 +8,10 @@ int main() {
         printf("Digite o %dº numero: ", i + 1);
         scanf("%d", &num[i]);
     }
-    
+
     for (int i = 0; i < tmax; i++) {
         printf("O %dº numero digitado foi: %d\n", i + 1, num[i]);
     }
+
     return 0;
 }

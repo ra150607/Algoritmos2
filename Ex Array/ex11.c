@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int tmax = 15, qtePar = 0, qteImpar = 0;
+    int tmax = 10;
     int num[tmax];
 
     for (int i = 0; i < tmax; i++) {
@@ -11,14 +11,17 @@ int main() {
 
     for (int i = 0; i < tmax; i++) {
         if (num[i] % 2 == 0) {
-            qtePar++;
-        } else {
-            qteImpar++;
+            printf("O número %d é par\n", num[i]);
         }
     }
 
-    printf("Quantidade de números pares: %d\n", qtePar);
-    printf("Quantidade de números ímpares: %d\n", qteImpar);
+    printf("\n");
+
+    for (int i = 0; i < tmax; i++) {
+        if (num[i] % 2 != 0) {
+            printf("O número %d é ímpar\n", num[i]);
+        }
+    }
 
     return 0;
 }

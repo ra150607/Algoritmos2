@@ -1,13 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int tmax = 10, menorNum = 2147483647, menorIndex = 0;
+    int tmax = 10, menorNum, menorIndex = 0;
     int num[tmax];
 
     for (int i = 0; i < tmax; i++) {
         printf("Digite o %dº numero: ", i + 1);
         scanf("%d", &num[i]);
     }
+
+    menorNum = num[0];
 
     for (int i = 0; i < tmax; i++) {
         if (num[i] < menorNum) {

@@ -17,12 +17,12 @@ int main() {
     }
 
     if(qteChar1 > qteChar2){
-
+        printf("A palavra %s tem mais caracteres, ela possui %d caracteres.", palavra1, qteChar1);
     }else if(qteChar2 > qteChar1){
-        printf("Ambas as palavras tem %d caracteres.");
+        printf("A palavra %s tem mais caracteres, ela possui %d caracteres.", palavra2, qteChar2);
     }
     else{
-        printf("Ambas as palavras tem %d caracteres.");
+        printf("Ambas as palavras tem %d caracteres.", qteChar1);
     }
 
     return 0;

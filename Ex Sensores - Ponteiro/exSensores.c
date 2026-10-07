@@ -22,24 +22,24 @@ int main() {
 
     for (int i = 0; i < qteSensores; i++) {
         printf("Digite o código do sensor %d: ", (i + 1));
-        scanf("%d", &(*sensores + i).codigo);
+        scanf("%d", &(*(sensores + i)).codigo);
         printf("Digite a temperatura do sensor %d: ", (i + 1));
-        scanf("%f", &(*sensores + i).temperatura);
+        scanf("%f", &(*(sensores + i)).temperatura);
     }
 
-    maiorTemperatura = (*sensores + 0).temperatura;
-    menorTemperatura = (*sensores + 0).temperatura;
+    maiorTemperatura = (*(sensores + 0)).temperatura;
+    menorTemperatura = (*(sensores + 0)).temperatura;
 
     for (int i = 0; i < qteSensores; i++) {
-        printf("Sensor %d - Código: %d, Temperatura: %.3f\n", (i + 1), (*sensores + i).codigo, (*sensores + i).temperatura);
-        somaTemperatura += (*sensores + i).temperatura;
+        printf("Sensor %d - Código: %d, Temperatura: %.3f\n", (i + 1), (*(sensores + i)).codigo, (*(sensores + i)).temperatura);
+        somaTemperatura += (*(sensores + i)).temperatura;
 
-        if ((*sensores + i).temperatura > maiorTemperatura) {
-            maiorTemperatura = (*sensores + i).temperatura;
+        if ((*(sensores + i)).temperatura > maiorTemperatura) {
+            maiorTemperatura = (*(sensores + i)).temperatura;
         }
 
-        if ((*sensores + i).temperatura < menorTemperatura) {
-            menorTemperatura = (*sensores + i).temperatura;
+        if ((*(sensores + i)).temperatura < menorTemperatura) {
+            menorTemperatura = (*(sensores + i)).temperatura;
         }
     }
 
@@ -69,26 +69,26 @@ int main() {
 
         for (int i = tamanhoAntigo; i < qteSensores; i++) {
             printf("Digite o código do sensor %d: ", (i + 1));
-            scanf("%d", &(*sensores + i).codigo);
+            scanf("%d", &(*(sensores + i)).codigo);
             printf("Digite a temperatura do sensor %d: ", (i + 1));
-            scanf("%f", &(*sensores + i).temperatura);
+            scanf("%f", &(*(sensores + i)).temperatura);
         }
 
         somaTemperatura = 0.0;
-        maiorTemperatura = (*sensores + 0).temperatura;
-        menorTemperatura = (*sensores + 0).temperatura;
+        maiorTemperatura = (*(sensores + 0)).temperatura;
+        menorTemperatura = (*(sensores + 0)).temperatura;
 
         printf("\nParametros com os novos sensores:\n");
         for (int i = 0; i < qteSensores; i++) {
-            printf("Sensor %d - Código: %d, Temperatura: %.3f\n", (i + 1), (*sensores + i).codigo, (*sensores + i).temperatura);
-            somaTemperatura += (*sensores + i).temperatura;
+            printf("Sensor %d - Código: %d, Temperatura: %.3f\n", (i + 1), (*(sensores + i)).codigo, (*(sensores + i)).temperatura);
+            somaTemperatura += (*(sensores + i)).temperatura;
 
-            if ((*sensores + i).temperatura > maiorTemperatura) {
-                maiorTemperatura = (*sensores + i).temperatura;
+            if ((*(sensores + i)).temperatura > maiorTemperatura) {
+                maiorTemperatura = (*(sensores + i)).temperatura;
             }
 
-            if ((*sensores + i).temperatura < menorTemperatura) {
-                menorTemperatura = (*sensores + i).temperatura;
+            if ((*(sensores + i)).temperatura < menorTemperatura) {
+                menorTemperatura = (*(sensores + i)).temperatura;
             }
         }
 
